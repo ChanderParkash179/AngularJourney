@@ -75,6 +75,15 @@
           <li>{{ msg.value }}</li>
         </ul>
       </li>
+      <li>
+        <strong>{{ twoWayDataBindingTitle }}</strong>
+        <ul>
+          <li><input type="text" [(ngModel)]="userName" (keyup.enter)="ontwDB()"></li>
+          <li><strong>
+              <p>{{ontwDBCheck == true ? userName : ""}}</p>
+            </strong></li>
+        </ul>
+      </li>
     </ol>
   </li>
 </ol>

@@ -48,4 +48,11 @@ export class NotesComponent {
   onTemplateVariable(msg: any) {
     this.tvMsg = msg;
   }
+
+  twoWayDataBindingTitle: string = "Two Way Data Binding";
+  userName: any;
+  ontwDBCheck: boolean = false;
+  ontwDB() {
+    this.ontwDBCheck = true;
+  }
 }
