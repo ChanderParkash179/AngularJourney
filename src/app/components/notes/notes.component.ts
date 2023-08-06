@@ -33,4 +33,12 @@ export class NotesComponent {
   btnClick() {
     return this.clicked = !this.clicked;
   }
+
+  eventFilteringTitle: string = "Event Filtering";
+  eventKeyFilterBtnTitle = "Click Me to Check Event Filtering Magic!";
+  eventKeyFilterMsg = "Thank You for Pressing Enter! I'm Key Up Filter";
+  eventKeyFilterCheck: boolean = false;
+  onKeyUp() {
+    return this.eventKeyFilterCheck = !this.eventKeyFilterCheck;
+  }
 }

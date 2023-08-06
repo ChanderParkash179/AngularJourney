@@ -58,6 +58,13 @@
           </li>
         </ul>
       </li>
+      <li>
+        <strong>{{ eventFilteringTitle }}</strong>
+        <ul>
+          <li><input type="text" (keyup.enter)="onKeyUp()" /></li>
+          <li>{{ eventKeyFilterCheck == true ? eventKeyFilterMsg : ""}}</li>
+        </ul>
+      </li>
     </ol>
   </li>
 </ol>
