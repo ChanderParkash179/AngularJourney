@@ -55,4 +55,15 @@ export class NotesComponent {
   ontwDB() {
     this.ontwDBCheck = true;
   }
+
+  // Two way data binding v/s one way data binding
+
+  // ONE - WAY DATA BINDING EXAMPLE PAIRS
+  stringInterpolationExamplePairs = '{{ title }}';
+  propertyBindingExamplePairs = '[src]';
+  classBindingExamplePairs = '[class.text-red]';
+  styleBindingExamplePairs = '[style.backgroundColor]';
+
+  // TWO - WAY DATA BINDING EXAMPLE PAIRS
+  ngModelExamplePair = '[(ngModel)]'
 }
