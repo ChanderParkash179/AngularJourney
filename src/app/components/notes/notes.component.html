@@ -23,6 +23,31 @@
           </ul>
         </strong>
       </li>
+      <li>
+        <strong>
+          {{classBindingTitle}}
+        </strong>
+        <ol>
+          <li>
+            <p class="text-color">using class biding implementing css style witout condition</p>
+          </li>
+          <li>
+            <p [class.text-color]="enableVar">using class binding implementing css style on condition</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>
+          {{styleBindingTitle}}
+        </strong>
+        <ul>
+          <li>
+            <a [href]="styleBindingUrl"><strong>click me for checking HTML DOM
+                object Name</strong></a>
+            <p [style.color]="colorVar ? 'purple' : 'yellow'">Style Binding - change color on condition</p>
+          </li>
+        </ul>
+      </li>
     </ol>
   </li>
 </ol>

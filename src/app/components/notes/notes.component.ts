@@ -19,4 +19,11 @@ export class NotesComponent {
   propertyBindingImgUrl: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1KAnF7oK_63ml1c_JAc-PQJhnwJfCugw6Q&usqp=CAU';
   propertyBindingImgName: string = 'property binding in angular image';
 
+  classBindingTitle: string = "Class Binding";
+  classBindingDef: string = "";
+  enableVar: boolean = false;
+
+  styleBindingTitle: string = "Style Binding";
+  styleBindingUrl: string = "https://www.w3schools.com/jsref/dom_obj_style.asp";
+  colorVar: boolean = true;
 }
