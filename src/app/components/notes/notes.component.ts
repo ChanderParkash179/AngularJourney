@@ -41,4 +41,11 @@ export class NotesComponent {
   onKeyUp() {
     return this.eventKeyFilterCheck = !this.eventKeyFilterCheck;
   }
+
+  templateVariableTitle = "Template Variable";
+  tvMsg: string = "";
+  tvCheck: boolean = false;
+  onTemplateVariable(msg: any) {
+    this.tvMsg = msg;
+  }
 }

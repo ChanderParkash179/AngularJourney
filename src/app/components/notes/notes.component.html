@@ -65,6 +65,16 @@
           <li>{{ eventKeyFilterCheck == true ? eventKeyFilterMsg : ""}}</li>
         </ul>
       </li>
+      <li>
+        <strong>{{ templateVariableTitle}}</strong>
+        <ul>
+          <li><strong>
+              <p>below text box's value will be displayed if you press enter after writing the string</p>
+            </strong></li>
+          <li><input type="text" (keyup.enter)="onTemplateVariable(msg.value)" #msg></li>
+          <li>{{ msg.value }}</li>
+        </ul>
+      </li>
     </ol>
   </li>
 </ol>
