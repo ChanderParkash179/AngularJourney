@@ -48,6 +48,16 @@
           </li>
         </ul>
       </li>
+      <li><strong>{{eventBindingTitle}}</strong>
+        <ul>
+          <li>
+            <button (click)="btnClick()"> {{btnTitle}}</button>
+          </li>
+          <li>
+            <p [style.color]="clicked ? 'green' : 'red'"> {{ clicked }} </p>
+          </li>
+        </ul>
+      </li>
     </ol>
   </li>
 </ol>

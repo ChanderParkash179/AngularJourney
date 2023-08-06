@@ -26,4 +26,11 @@ export class NotesComponent {
   styleBindingTitle: string = "Style Binding";
   styleBindingUrl: string = "https://www.w3schools.com/jsref/dom_obj_style.asp";
   colorVar: boolean = true;
+
+  eventBindingTitle: string = "Event Binding";
+  btnTitle = "Click Me to check below response";
+  clicked: boolean = true;
+  btnClick() {
+    return this.clicked = !this.clicked;
+  }
 }
