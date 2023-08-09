@@ -1,0 +1,11 @@
+.form-area,
+.form-view {
+
+  margin-top: 50px;
+  text-align: center;
+}
+
+.title-bg {
+  padding: 10px;
+  background-color: yellow;
+}

@@ -1,0 +1,32 @@
+<div class="form-area">
+
+  <input type="text" [placeholder]="formTitle" [(ngModel)]="postTitle">
+
+  <br><br>
+
+  <textarea [placeholder]="formDetails" cols="30" rows="10" [(ngModel)]="postDetail"></textarea>
+
+  <br><br>
+
+  <input type="text" [placeholder]="formImgUrl" [(ngModel)]="postImgSrc">
+
+  <br><br>
+
+  <input type="text" [placeholder]="formPageUrl" [(ngModel)]="postPageUrl">
+
+  <br><br>
+
+  <input type="checkbox" [(ngModel)]="postCheck"> {{ formBgTitle }}
+</div>
+
+<div class="form-view">
+
+  <h1><span [class.title-bg]="postCheck">{{ postTitle }}</span></h1>
+  <br>
+  <p>{{ postDetail }}</p>
+  <br>
+  <img [src]="postImgSrc">
+  <br>
+  <br>
+  <a [href]="postPageUrl" target="_blank" [style.display]="postPageUrl ? 'block' : 'none'"> More Detail</a>
+</div>
