@@ -1,0 +1,38 @@
+<div class="directives">
+  <div class="title">
+    <h3>DIRECTIVES</h3>
+  </div>
+
+  <br>
+  <div class="ngForDirective">
+
+    <div class="simple">
+      <h4>SIMPLE *ngFor</h4>
+      <ol>
+        <li *ngFor="let p of postArray">{{ p }}</li>
+      </ol>
+    </div>
+
+    <br>
+
+    <div class="obj">
+      <h4>OBJECT *ngFor</h4>
+      <ol>
+        <li *ngFor="let post of posts"> {{ post | json }}</li>
+      </ol>
+
+    </div>
+
+    <br>
+
+    <div class="objNewData">
+      <h4>OBJECT with add new data</h4>
+      <button (click)="addNew()">Add New Data</button>
+      <ol>
+        <li *ngFor="let student of students">{{ student.name }} - {{ student.age }} <button
+            (click)="onDelete(student)">Delete</button></li>
+      </ol>
+    </div>
+
+  </div>
+</div>

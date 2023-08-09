@@ -22,7 +22,42 @@
   </li>
 </ol>
 <hr>
+
 <ol>
+  <li> <strong>{{ section2 }}</strong>
+    <ol>
+      <li><strong>Angular Directive: </strong>
+        <i> An Angular directive is special type of technology that can manipulate the DOM Object. <br>
+          Directives can do HTML elements removing html elements from DOM dynamically.</i>
+      </li>
+      <li><strong>Angular - Directive (Components)</strong><br><i> Directives are Components without a View
+          <strong>&</strong> Angular Components are Directives,
+          with a View</i></li>
+      <li>
+        <strong>Angular - Directive Types</strong>
+        <ul>
+          <li><strong>Component Directive: </strong><i>which is an angular directive with a template view</i></li>
+          <li><strong>Structural Directive: </strong><i>which can change the DOM layout by adding and removing DOM
+              elements</i></li>
+          <li><strong>Attribute Directive: </strong><i>which can change the appearance or behavior of an element,
+              component, or another directive.</i></li>
+          <li><strong>Custom Directive: </strong><i>which can create our custom directive from scratch.</i></li>
+        </ul>
+      </li>
+      <li> <strong>Directives</strong>
+        <ul>
+          <li><strong>NgFor Directive: </strong>
+            <ul>
+              <li>we use NgFor Directive to render an Array inside the view</li>
+              <li>NgFor Directive is a Structural Directive</li>
+              <li>With NgFor Directive we can Manipulate the DOM.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <br>
   <li> <strong>{{ section1 }}</strong>
     <ol>
       <li><strong>
@@ -61,7 +96,7 @@
         </strong>
         <ul>
           <li>
-            <a [href]="styleBindingUrl"><strong>click me for checking HTML DOM
+            <a [href]="styleBindingUrl" target="_blank"><strong>click me for checking HTML DOM
                 object Name</strong></a>
             <p [style.color]="colorVar ? 'purple' : 'yellow'">Style Binding - change color on condition</p>
           </li>

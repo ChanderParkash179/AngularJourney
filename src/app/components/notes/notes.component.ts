@@ -9,7 +9,8 @@ export class NotesComponent {
 
   notesTitle: string = "NOTES";
 
-  section1: string = "Intro Display Data & Event Handling";
+  section1: string = "SEC 01: Introduction to Display Data & Event Handling";
+  section2: string = "SEC 02: Introduction to Directives";
 
   stringInterpolationTitle: string = "String Interpolation";
   stringInterpolationDef: string = "String Interpolation is used to show dynamic data on HTML Page or inside the view (HTML Page)";
