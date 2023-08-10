@@ -68,4 +68,12 @@ export class DirectivesComponent implements OnInit {
     this.stepForm = step;
   }
 
+  // ngStyle
+
+  isActive: boolean = true;
+
+  // ngClass
+
+  isClassActive: boolean = true;
+
 }

@@ -2,8 +2,34 @@
   <div class="title">
     <h3>DIRECTIVES</h3>
   </div>
+  <br>
 
-  <div class="ngSwitch">
+  <br>
+  <div class="ngClassDirective">
+    <div [ngClass]="{
+      'main': isActive,
+      'text-weight':isActive
+    }">
+      <h1>Hello I'm From ngClass Directive</h1>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="ngStyleDirective">
+
+    <div [ngStyle]="{
+      color : isActive ? 'blue' : 'black',
+      textTransform : isActive ? 'uppercase' : 'lowercase'
+    }">
+      <h1>Hello I'm from ngStyle Directive</h1>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="ngSwitchDirective">
     <div class="btns">
       <button (click)="stepFormBtn('s1')">Step 1</button> &nbsp;
       <button (click)="stepFormBtn('s2')">Step 2</button> &nbsp;
