@@ -1,1 +1,60 @@
-<p>pipes works!</p>
+<div class="pipes">
+
+  <!-- uppercase pipe -->
+  <h2 class="uppperCase">
+    {{ upperCaseValue | uppercase }}
+  </h2>
+
+  <!-- lowercase pipe -->
+  <h2 class="lowercase">
+    {{ lowerCaseValue | lowercase }}
+  </h2>
+
+  <!-- number pipe -->
+  <h2 class="number">
+    {{ numberValue | number }}
+  </h2>
+
+  <!-- decimal pipe -->
+  <h2 class="decimal">
+    {{ decimalValue | number : '1.2-3'}}
+  </h2>
+
+  <!-- currency pipe -->
+  <h2 class="currency">
+    {{ currencyValue | currency : 'EUR' }}
+    or
+    {{ currencyValue | currency : 'USD' : false : "2.1-2" }}
+  </h2>
+
+  <!-- date pipe -->
+  <h2 class="date">
+    ({{ dateValue | date }}
+    ) - or - (
+    {{ dateValue | date : 'short' }}
+    ) - or - (
+    {{ dateValue | date : 'long' }}
+    )
+  </h2>
+
+  <!-- json pipe -->
+  <h2 class="json">
+    {{ jsonValue | json }}
+  </h2>
+
+  <!-- percentage pipe -->
+  <h2 class="percent">
+    ({{ percentValue | percent }}
+    ) - or - (
+    {{ percentValue | percent : '1.1-1'}})
+  </h2>
+
+  <!-- slice pipe -->
+  <div class="slice">
+    <h2>
+      ({{ sliceValue | slice : 2:4 }}
+      ) - or - (
+      {{ sliceValue | slice : 1:5 }})
+    </h2>
+  </div>
+</div>
