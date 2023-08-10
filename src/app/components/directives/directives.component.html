@@ -3,6 +3,22 @@
     <h3>DIRECTIVES</h3>
   </div>
 
+  <div class="ngTemplateDirective">
+
+    <button (click)="addNewGroup()">Add New Group</button>
+
+    <div class="notEmpty" *ngIf="groups.length > 0; else noGroup">
+      <ol>
+        <li *ngFor="let group of groups">{{ group }}</li>
+      </ol>
+    </div>
+
+    <ng-template #noGroup>
+      <p><strong>No Groups are Available</strong></p>
+    </ng-template>
+
+  </div>
+
   <br>
   <div class="ngIfDirective">
 
@@ -19,36 +35,37 @@
     </div>
 
   </div>
+</div>
+
+<br>
+<div class="ngForDirective">
+
+  <div class="simple">
+    <h4>SIMPLE *ngFor</h4>
+    <ol>
+      <li *ngFor="let p of postArray">{{ p }}</li>
+    </ol>
+  </div>
+
   <br>
-  <div class="ngForDirective">
 
-    <div class="simple">
-      <h4>SIMPLE *ngFor</h4>
-      <ol>
-        <li *ngFor="let p of postArray">{{ p }}</li>
-      </ol>
-    </div>
-
-    <br>
-
-    <div class="obj">
-      <h4>OBJECT *ngFor</h4>
-      <ol>
-        <li *ngFor="let post of posts"> {{ post | json }}</li>
-      </ol>
-
-    </div>
-
-    <br>
-
-    <div class="objNewData">
-      <h4>OBJECT with add new data</h4>
-      <button (click)="addNew()">Add New Data</button>
-      <ol>
-        <li *ngFor="let student of students">{{ student.name }} - {{ student.age }} <button
-            (click)="onDelete(student)">Delete</button></li>
-      </ol>
-    </div>
+  <div class="obj">
+    <h4>OBJECT *ngFor</h4>
+    <ol>
+      <li *ngFor="let post of posts"> {{ post | json }}</li>
+    </ol>
 
   </div>
+
+  <br>
+
+  <div class="objNewData">
+    <h4>OBJECT with add new data</h4>
+    <button (click)="addNew()">Add New Data</button>
+    <ol>
+      <li *ngFor="let student of students">{{ student.name }} - {{ student.age }} <button
+          (click)="onDelete(student)">Delete</button></li>
+    </ol>
+  </div>
+
 </div>

@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
+
   // ngFor
 
   postArray: Array<string> = ['Post 1', 'Post 3', 'Post 3', 'Post 4', 'Post 5'];
@@ -47,10 +54,11 @@ export class DirectivesComponent implements OnInit {
   }
 
 
-  constructor() { }
+  // ng Template
+  groups: Array<string> = [];
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  addNewGroup() {
+    this.groups.push('group');
   }
 
 }
