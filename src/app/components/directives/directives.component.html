@@ -3,6 +3,22 @@
     <h3>DIRECTIVES</h3>
   </div>
 
+  <div class="ngSwitch">
+    <div class="btns">
+      <button (click)="stepFormBtn('s1')">Step 1</button> &nbsp;
+      <button (click)="stepFormBtn('s2')">Step 2</button> &nbsp;
+      <button (click)="stepFormBtn('s3')">Step 3</button> &nbsp;
+    </div>
+
+    <div class="resp" [ngSwitch]="stepForm">
+      <p *ngSwitchCase="'s1'">Step 1 clicked!</p>
+      <p *ngSwitchCase="'s2'">Step 2 clicked!</p>
+      <p *ngSwitchCase="'s3'">Step 3 clicked!</p>
+      <p *ngSwitchDefault>Something Else</p>
+    </div>
+  </div>
+
+  <br>
   <div class="ngTemplateDirective">
 
     <button (click)="addNewGroup()">Add New Group</button>
@@ -20,6 +36,7 @@
   </div>
 
   <br>
+
   <div class="ngIfDirective">
 
     <button (click)="addNewSeason()">Add New Season</button>

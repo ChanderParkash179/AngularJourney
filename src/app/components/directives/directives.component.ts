@@ -61,4 +61,11 @@ export class DirectivesComponent implements OnInit {
     this.groups.push('group');
   }
 
+  // ngSwitch
+  stepForm: any;
+
+  stepFormBtn(step: any) {
+    this.stepForm = step;
+  }
+
 }
