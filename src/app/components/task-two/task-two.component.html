@@ -1,0 +1,58 @@
+<div class="task-two">
+
+  <div class="form">
+    <input type="text" [placeholder]="name" [(ngModel)]="nameValues">
+    <br>
+    <br>
+    <input type="email" [placeholder]="email" [(ngModel)]="emailValues">
+    <br>
+    <br>
+    <textarea cols="30" rows="10" [placeholder]="address" [(ngModel)]="addressValues"></textarea>
+    <br>
+    <br>
+    <button (click)="onSave(nameValues, emailValues, addressValues)">Submit</button>
+  </div>
+</div>
+
+<div class="response">
+
+  <table class="details" *ngIf="studentList.length > 0; else noData">
+    <tr>
+      <th>
+        <h2><strong>#&emsp;</strong></h2>
+      </th>
+      <th>
+        <h2><strong>Name&emsp;</strong></h2>
+      </th>
+      <th>
+        <h2><strong>Email&emsp;</strong></h2>
+      </th>
+      <th>
+        <h2><strong>Address&emsp;</strong></h2>
+      </th>
+      <th>
+        <h2><strong>Action</strong></h2>
+      </th>
+    </tr>
+    <tr *ngFor="let student of studentList; let i = index">
+      <td>
+        <h2 [style.display]="studentList.length > 0 ? 'block' : 'none'"><strong>{{ i+1 }}&emsp;</strong></h2>
+      </td>
+      <td>
+        <h2><strong>{{ student.name }}&emsp;</strong></h2>
+      </td>
+      <td>
+        <h2><strong>{{ student.email }}&emsp;</strong></h2>
+      </td>
+      <td>
+        <h2><strong>{{ student.address }}</strong></h2>
+      </td>
+      <td>
+        <button (click)="onDelete(i)">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <ng-template #noData>
+    <h2>No Data Available at the Moment!</h2>
+  </ng-template>
+</div>
