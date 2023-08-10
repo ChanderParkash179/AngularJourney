@@ -4,6 +4,22 @@
   </div>
 
   <br>
+  <div class="ngIfDirective">
+
+    <button (click)="addNewSeason()">Add New Season</button>
+
+    <div class="notEmpty" *ngIf="seasons.length > 0">
+      <ol>
+        <li *ngFor="let season of seasons">{{ season }}</li>
+      </ol>
+    </div>
+
+    <div class="isEmpty" *ngIf="seasons.length == 0">
+      <p><strong>No Seasons are Available</strong></p>
+    </div>
+
+  </div>
+  <br>
   <div class="ngForDirective">
 
     <div class="simple">

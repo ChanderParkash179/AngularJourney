@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  // ngFor
 
   postArray: Array<string> = ['Post 1', 'Post 3', 'Post 3', 'Post 4', 'Post 5'];
 
@@ -36,6 +37,15 @@ export class DirectivesComponent implements OnInit {
     let index = this.students.indexOf(student);
     this.students.splice(index, 1);
   }
+
+
+  // ngIf
+  seasons: Array<string> = [];
+
+  addNewSeason() {
+    this.seasons.push('season');
+  }
+
 
   constructor() { }
 
