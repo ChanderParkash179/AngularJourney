@@ -1,0 +1,12 @@
+<div class="addNew">
+  <button (click)="addNew()">Add New</button>
+</div>
+<div class="postServiceList">
+  <ul>
+    <strong>*this below list is coming from post-service <br></strong>
+    <li *ngFor="let p of posts; let i = index;">{{ p.post }}
+      <button (click)="deleteOld(i)">Delete</button>
+    </li>
+
+  </ul>
+</div>

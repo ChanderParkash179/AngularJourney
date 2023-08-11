@@ -8,9 +8,11 @@ import { NotesComponent } from './components/notes/notes.component';
 import { TaskOneComponent } from './components/tasks/task-one/task-one.component';
 import { DirectivesComponent } from './components/sections/directives/directives.component';
 import { TaskTwoComponent } from './components/tasks/task-two/task-two.component';
-import { PipesComponent } from './components/sections/pipes/pipe/pipes.component';
-import { CustomPipePipe } from './components/sections/pipes/custom-pipe.pipe';
-import { CustomPipeWithArgumentsPipe } from './components/sections/pipes/custom-pipe-with-arguments.pipe';
+import { PipesComponent } from './pipes/pipe/pipes.component';
+import { CustomPipePipe } from './pipes/custom-pipe.pipe';
+import { CustomPipeWithArgumentsPipe } from './pipes/custom-pipe-with-arguments.pipe';
+import { PostServiceComponent } from './components/sections/ps-component/ps-component.component';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,15 @@ import { CustomPipeWithArgumentsPipe } from './components/sections/pipes/custom-
     TaskTwoComponent,
     PipesComponent,
     CustomPipePipe,
-    CustomPipeWithArgumentsPipe
+    CustomPipeWithArgumentsPipe,
+    PostServiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
