@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class PostServiceComponent implements OnInit {
   }
 
   addNew() {
-    let newData = ({ id: 7, post: 'Post 7' });
+    let newData: Post = ({ id: 7, post: 'Post 7' });
     this.postService.addNewData(newData);
   }
 
