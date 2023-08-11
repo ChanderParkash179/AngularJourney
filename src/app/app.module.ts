@@ -13,6 +13,7 @@ import { CustomPipePipe } from './pipes/custom-pipe.pipe';
 import { CustomPipeWithArgumentsPipe } from './pipes/custom-pipe-with-arguments.pipe';
 import { PostServiceComponent } from './components/sections/ps-component/ps-component.component';
 import { PostService } from './services/post.service';
+import { TemplateDrivenFormsComponent } from './components/sections/template-driven-forms/template-driven-forms.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PostService } from './services/post.service';
     PipesComponent,
     CustomPipePipe,
     CustomPipeWithArgumentsPipe,
-    PostServiceComponent
+    PostServiceComponent,
+    TemplateDrivenFormsComponent
   ],
   imports: [
     BrowserModule,
