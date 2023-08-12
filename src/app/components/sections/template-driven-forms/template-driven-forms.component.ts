@@ -12,14 +12,7 @@ export class TemplateDrivenFormsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
   onSubmit(f: NgForm) {
-    console.log(f);
+    console.log(f.value);
   }
-
-  getValue(f: FormControl) {
-    console.log(f);
-  }
-
 }
