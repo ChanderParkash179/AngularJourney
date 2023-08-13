@@ -15,6 +15,7 @@ export class NotesComponent {
   section3: string = "SEC 03: Introduction to Pipes";
   section4: string = "SEC 04: Introduction to Services";
   section5: string = "SEC 05: Introduction to Template Driven Forms";
+  section6: string = "SEC 06: Introduction to Reactive Forms";
 
   stringInterpolationTitle: string = "String Interpolation";
   stringInterpolationDef: string = "String Interpolation is used to show dynamic data on HTML Page or inside the view (HTML Page)";

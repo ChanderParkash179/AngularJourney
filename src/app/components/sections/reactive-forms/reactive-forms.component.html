@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <div class="form-area">
+    <h1><strong><i>Reactive Form</i></strong></h1>
+
+    <form [formGroup]='form'>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter Full Name" formControlName="fullName">
+
+        <div class="alert alert-danger" *ngIf="getControl('fullName')?.touched && getControl('fullName')?.invalid">
+          <small *ngIf="getControl('fullName')?.errors?.['required']">Full Name should not be Empty!</small>
+          <small *ngIf="getControl('fullName')?.errors?.['minlength']">Full Name contains at least
+            6 characters.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
+
+        <div class="alert alert-danger" *ngIf="getControl('email')?.touched && getControl('email')?.invalid">
+          <small *ngIf="getControl('email')?.errors?.['required']">Email should not be Empty!</small>
+          <small *ngIf="getControl('email')?.errors?.['pattern']">Email should be in proper format.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <textarea class="form-control" placeholder="Enter Address" cols="30" rows="10" name="address"
+          formControlName="address"></textarea>
+
+        <div class="alert alert-danger" *ngIf="getControl('address')?.touched && getControl('address')?.invalid">
+          <small *ngIf="getControl('address')?.errors?.['required']">Address should not be Empty!</small>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid && form.touched">Submit</button>
+    </form>
+  </div>
+</div>
