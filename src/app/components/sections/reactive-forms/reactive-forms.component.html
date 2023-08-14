@@ -2,7 +2,7 @@
   <div class="form-area">
     <h1><strong><i>Reactive Form</i></strong></h1>
 
-    <form [formGroup]='form'>
+    <form [formGroup]='form' (ngSubmit)="onSubmit()">
 
       <div class="form-group">
         <label>Full Name</label>
@@ -35,7 +35,15 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary" [disabled]="form.invalid && form.touched">Submit</button>
+      <div class="form-group">
+        <label>Skills</label>
+        <input type="text" class="form-control" #skill (keyup.enter)="addSkill(skill)">
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let s of Skills.controls; let i = index">{{ s.value }} &nbsp; <a
+            class="btn btn-sm btn-danger" (click)="onRemove(i)"><strong> X </strong></a></li>
+      </ul>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
     </form>
   </div>
 </div>
