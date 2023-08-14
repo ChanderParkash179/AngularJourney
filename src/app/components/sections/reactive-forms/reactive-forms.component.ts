@@ -1,5 +1,5 @@
-import { Component, OnInit, Pipe } from '@angular/core';
-import { FormGroup, FormControl, NgForm, Validators, AbstractControl, FormArray } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder, AbstractControl, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -10,12 +10,23 @@ export class ReactiveFormsComponent implements OnInit {
 
   emailPattern: any = '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$';
 
-  form: any = new FormGroup({
-    fullName: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
-    address: new FormControl('', [Validators.required]),
-    skills: new FormArray([])
+  // form: any = new FormGroup({
+  //   fullName: new FormControl('', [Validators.required, Validators.minLength(6)]),
+  //   email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
+  //   address: new FormControl('', [Validators.required]),
+  //   skills: new FormArray([])
+  // });
+
+  constructor(private _formBuilder: FormBuilder) {
+  }
+
+  form: any = this._formBuilder.group({
+    fullName: this._formBuilder.control('', [Validators.required, Validators.minLength(5)]),
+    email: this._formBuilder.control('', [Validators.required, Validators.pattern(this.emailPattern)]),
+    address: this._formBuilder.control('', [Validators.required]),
+    skills: this._formBuilder.array([], [Validators.required, Validators.minLength(5)])
   });
+
 
   get Skills() {
     return this.form.get('skills') as FormArray;
@@ -39,7 +50,6 @@ export class ReactiveFormsComponent implements OnInit {
     this.Skills.removeAt(index);
   }
 
-  constructor() { }
 
   ngOnInit(): void { }
 }
