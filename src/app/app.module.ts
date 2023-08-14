@@ -15,7 +15,8 @@ import { PostServiceComponent } from './components/sections/ps-component/ps-comp
 import { PostService } from './services/post.service';
 import { TemplateDrivenFormsComponent } from './components/sections/template-driven-forms/template-driven-forms.component';
 import { ReactiveFormsComponent } from './components/sections/reactive-forms/reactive-forms.component';
-import { CustomValidationOneComponent } from './components/sections/custom-validation-one/custom-validation-one.component';
+import { CustomValidationComponent } from './components/sections/custom-validation/custom-validation.component';
+import { PostListComponent } from './components/sections/routing-navigation/post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CustomValidationOneComponent } from './components/sections/custom-valid
     PostServiceComponent,
     TemplateDrivenFormsComponent,
     ReactiveFormsComponent,
-    CustomValidationOneComponent
+    CustomValidationComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,

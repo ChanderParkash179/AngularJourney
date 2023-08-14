@@ -3,11 +3,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { noSpace } from '../../../validators/no-space.validators';
 
 @Component({
-  selector: 'app-custom-validation-one',
-  templateUrl: './custom-validation-one.component.html',
-  styleUrls: ['./custom-validation-one.component.css']
+  selector: 'app-custom-validation',
+  templateUrl: './custom-validation.component.html',
+  styleUrls: ['./custom-validation.component.css']
 })
-export class CustomValidationOneComponent implements OnInit {
+export class CustomValidationComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder) { }
 
