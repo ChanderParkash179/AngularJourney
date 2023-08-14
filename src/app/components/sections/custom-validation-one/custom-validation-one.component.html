@@ -1,0 +1,40 @@
+<div class="container my-5 border py-5 px-5">
+  <div class="text-center">
+    <h1>Signup</h1>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label>Username: </label>
+      <input type="text" name="username" class="form-control" formControlName="username">
+
+      <!-- validations -->
+
+      <div class="alert alert-danger" *ngIf="formControls.username?.touched && formControls.username?.invalid">
+        <small *ngIf="formControls.username?.errors?.['required']">Username should not be Empty!</small>
+        <small *ngIf="formControls.username?.errors?.['minlength']">Username should contains atleast 8
+          characters.</small>
+        <small *ngIf="formControls.username?.errors?.['noSpaceValidators']">Username should not contains spaces!</small>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label>Password: </label>
+      <input type="password" name="password" class="form-control" formControlName="password">
+
+      <!-- validations -->
+
+      <div class="alert alert-danger" *ngIf="formControls.password?.touched && formControls.password?.invalid">
+        <small *ngIf="formControls.password?.errors?.['required']">Password should not be Empty!</small>
+        <small *ngIf="formControls.password?.errors?.['minlength']">Password should contains atleast 8
+          characters.</small>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
