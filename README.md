@@ -83,51 +83,39 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - RESTful Web Service
 - RESTful CRUD Operations
 - Angular HTTP API
-- HTTP Configuration 1
+- HTTP Configuration
 
 ## 🚀 Getting Started with Angular
 
 - Creating Angular App
-- HTTP Configuration 2
 - Angular Services
 - Creating Angular Service
 
 ## 🔗 Working with HTTP
 
-- Injecting HTTP Client 1
-- Injecting HTTP Client 2
-- Using HTTP Client 1
+- Injecting HTTP Client
+- Using HTTP Client
 - JSON Placeholder
-- Using HTTP Client 2
 
 ## 🌍 Data Handling and Manipulation
 
 - Mapping HTTP Response
-- Subscribing to Observables 1
-- Subscribing to Observables 2
+- Subscribing to Observables
 - Environment Variables
 
 ## 📬 Sending HTTP Requests
 
-- Sending POST Request 1
-- Sending POST Request 2
-- Sending PUT Request 1
-- Sending PUT Request 2
-- Sending PATCH Request 1
-- Sending PATCH Request 2
-- Sending DELETE Request 1
-- Sending DELETE Request 2
+- Sending POST Request
+- Sending PUT Request
+- Sending PATCH Request
+- Sending DELETE Request
 
 ## 📝 HTTP Request Configuration
 
-- HTTP Headers 1
-- HTTP Headers 2
-- HTTP Request Parameters 1
-- HTTP Request Parameters 2
+- HTTP Headers
+- HTTP Request Parameters
 - HTTP Events
-- HTTP Request Progress 1
-- HTTP Request Progress 2
-- HTTP Request Progress 3
+- HTTP Request Progress
 - Request Text Data Type
 
 ## ➰ Advanced Concepts
@@ -136,25 +124,18 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - Reactive Programming
 - Intro to RxJS
 - RxJS Tap Operator
-- RxJS Map Operator 1
-- RxJS Map Operator 2
-- RxJS Map Operator 3
-- RxJS Map Operator 4
+- RxJS Map Operator
 - RxJS Retry Operator
 
 ## ❌ Error Handling
 
 - Error Handling Overview
-- Error Catch and Replace 1
-- Error Catch and Replace 2
-- Error Catch and Re-throw 1
-- Error Catch and Re-throw 2
+- Error Catch and Replace
+- Error Catch and Re-throw
 
 ## ⚙️ Angular Interceptors
 
-- Angular Interceptor 1
-- Angular Interceptor 2
-- Angular Interceptor 3
+- Angular Interceptor
 
 Join me on this journey of Angular exploration, and let's build amazing web applications together! Happy coding! 🚀
 
