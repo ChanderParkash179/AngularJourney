@@ -1,10 +1,10 @@
 <!-- OLD EXAMPLE -->
 <div class="text-center my-5 mx-5 py-5 px-5">
   <button class="btn" routerLink="/posts" routerLinkActive="active">Posts</button>
-  <router-outlet></router-outlet>
 </div>
-<!-- from Here is the current code -->
 
+<!-- from Here is the current code -->
+<router-outlet></router-outlet>
 <div class="border px-5 py-5 mx-5 my-5">
   <div *ngFor="let post of posts; let index = index">
     <h1>{{ post.title }}</h1>
