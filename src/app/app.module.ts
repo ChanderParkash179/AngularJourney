@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import { ObservablesComponent } from './components/sections/observables/observab
 import { PageOneComponent } from './components/sections/routing-navigation/navigate-programmatically/page-one/page-one.component';
 import { PageTwoComponent } from './components/sections/routing-navigation/navigate-programmatically/page-two/page-two.component';
 import { WildCardRouterComponent } from './components/sections/routing-navigation/wild-card-router/wild-card-router.component';
+import { UserComponent } from './components/sections/http/user/user.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,13 +46,15 @@ import { WildCardRouterComponent } from './components/sections/routing-navigatio
     ObservablesComponent,
     PageOneComponent,
     PageTwoComponent,
-    WildCardRouterComponent
+    WildCardRouterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
