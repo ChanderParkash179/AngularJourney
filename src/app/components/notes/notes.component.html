@@ -1,13 +1,25 @@
 <div class="container border mt-5 mb-5 pt-3 pl-5 pr-5">
-  <h1><u>{{ notesTitle }}</u></h1>
-  <h4></h4>
-  <p><strong>{{ ngOnintString }}</strong>: `ngOnInit()` is a lifecycle hook method in Angular. It is called
-    once when a component is initialized, after the constructor. It is used to perform initial setup tasks, data
-    retrieval, or API calls for the component.</p>
-
-  <hr>
-
+  <h1><u><strong>{{ notesTitle }}</strong></u></h1>
+  <br>
   <ol>
+    <li><strong>{{ section8 }}</strong>
+      <ol>
+        <li><strong>HTTP: </strong><i>A protocol which allows the fetching of resources, such as HTML documents, from a
+            web server. It is the foundation of data communication for the <strong>World Wide Web (www)</strong>.</i>
+        </li>
+        <li><strong>RESTful Web Service: </strong><i>REST Architecture based Web Services. RESTful web services are
+            light weight, highly scalable and maintainable and are very commonly used to create API's for web-based
+            applications.</i></li>
+        <li><strong>CRUD:</strong>
+          <ul>
+            <li><strong>C: CREATE </strong><i>(POST - RETURN 201 IF SUCCESSFUL)</i></li>
+            <li><strong>R: READ </strong><i>(GET - RETURN 200 IF SUCCESSFUL)</i></li>
+            <li><strong>U: UPDATE </strong><i>(PUT/PATCH - RETURN 204 IF SUCCESSFUL)</i></li>
+            <li><strong>D: DELETE </strong><i>(DELETE - RETURN 204 IF SUCCESSFUL)</i></li>
+          </ul>
+        </li>
+      </ol>
+    </li>
     <li><strong>{{ section7 }}</strong>
       <ol>
         <li><strong>Routing: </strong><i>basically it means that navigating between pages.</i></li>
@@ -327,4 +339,11 @@
       </ol>
     </li>
   </ol>
+
+  <hr>
+  <h4><strong>Definitions: </strong></h4>
+  <p><strong>{{ ngOnintString }}</strong>: `ngOnInit()` is a lifecycle hook method in Angular. It is called
+    once when a component is initialized, after the constructor. It is used to perform initial setup tasks, data
+    retrieval, or API calls for the component.</p>
+
 </div>
