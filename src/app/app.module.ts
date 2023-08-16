@@ -17,8 +17,7 @@ import { TemplateDrivenFormsComponent } from './components/sections/template-dri
 import { ReactiveFormsComponent } from './components/sections/reactive-forms/reactive-forms.component';
 import { CustomValidationComponent } from './components/sections/custom-validation/custom-validation.component';
 import { PostListComponent } from './components/sections/routing-navigation/post-list/post-list.component';
-import { HomePageComponent } from './components/sections/routing-navigation/home-page/home-page.component';
-
+import { HomeComponent } from './components/sections/routing-navigation/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +33,7 @@ import { HomePageComponent } from './components/sections/routing-navigation/home
     ReactiveFormsComponent,
     CustomValidationComponent,
     PostListComponent,
-    HomePageComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
