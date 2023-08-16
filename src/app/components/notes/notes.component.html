@@ -40,8 +40,31 @@
             <li><strong>Observable: </strong><i>An Observable is a sequence of data that is emitted asynchronously or
                 synchronously over period of time or An Observable will continously observe a set of stream data and
                 automatically update or track the sequence of data whenever there's something changed!</i></li>
+            <li><strong>Observable's next method: </strong><i>The observer's next method defines how to process the data
+                sent by the observable.</i></li>
+            <li><strong>subscribe(): </strong><i>When you have an Observable that represents an asynchronous data
+                stream, you can "subscribe" to it to start receiving values emitted by the Observable. The subscribe
+                method is used to set up a subscription to an Observable. Subscribing to an Observable is similar to
+                setting up an event listener. When you subscribe, you provide callback functions that will be executed
+                whenever new data is emitted by the Observable.</i></li>
+            <li><strong>unsubscribe(): </strong><i>It's important to manage your subscriptions properly to avoid memory
+                leaks. When you subscribe to an Observable, Angular will automatically manage the subscription and
+                ensure that it is cleaned up when the component is destroyed. However, there are scenarios where you
+                might want to manually unsubscribe to prevent unnecessary processing or memory usage. If you don't
+                unsubscribe from a subscription when a component is destroyed, the subscription could keep references to
+                the component, leading to memory leaks. To manually unsubscribe, you can store the subscription in a
+                variable and call its unsubscribe method when the component is destroyed.</i></li>
+            <li><strong>Synchronous v/s Asynchronous</strong>
+              <ul>
+                <li><strong>Synchronous: </strong><i>In this the code is executed in sequence, each statement waits for
+                    the previous statement to finish before executing.</i></li>
+                <li><strong>Asynchronous: </strong><i>In this the code doesn't have to waits for
+                    the previous statement to finish completely this can continue to run.</i></li>
+              </ul>
+            </li>
           </ul>
         </li>
+        <li><strong>NOTE: </strong><i>Mostly JavaScript is Asynchronous</i></li>
       </ol>
     </li>
     <li><strong>{{ section6 }}</strong>

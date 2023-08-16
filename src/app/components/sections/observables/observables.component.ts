@@ -11,9 +11,15 @@ export class ObservablesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let _observe = new Observable(observe => {
+    const _observe = new Observable(observe => {
       console.log('printed from Observable');
     }).subscribe();
+
+    const _observeNext = new Observable(observe => {
+      observe.next("I am Obervable's next feature!")
+    }).subscribe(value => {
+      console.log(value);
+    });
   }
 
 }
