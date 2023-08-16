@@ -1,6 +1,14 @@
+<!-- OLD EXAMPLE -->
 <div class="text-center my-5 mx-5 py-5 px-5">
-  <div class="form-group">
-    <button class="btn" routerLink="/" routerLinkActive="active">Home</button>
-    <router-outlet></router-outlet>
+  <button class="btn" routerLink="/posts" routerLinkActive="active">Posts</button>
+  <router-outlet></router-outlet>
+</div>
+<!-- from Here is the current code -->
+
+<div class="border px-5 py-5 mx-5 my-5">
+  <div *ngFor="let post of posts; let index = index">
+    <h1>{{ post.title }}</h1>
+    <button class="btn btn-primary" [routerLink]="['/post', index+1]">View Content</button>
+    <hr>
   </div>
 </div>

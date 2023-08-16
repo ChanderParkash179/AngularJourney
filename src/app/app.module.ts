@@ -18,6 +18,7 @@ import { ReactiveFormsComponent } from './components/sections/reactive-forms/rea
 import { CustomValidationComponent } from './components/sections/custom-validation/custom-validation.component';
 import { PostListComponent } from './components/sections/routing-navigation/post-list/post-list.component';
 import { HomeComponent } from './components/sections/routing-navigation/home/home.component';
+import { PostComponent } from './components/sections/routing-navigation/post/post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { HomeComponent } from './components/sections/routing-navigation/home/hom
     ReactiveFormsComponent,
     CustomValidationComponent,
     PostListComponent,
-    HomeComponent
+    HomeComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
