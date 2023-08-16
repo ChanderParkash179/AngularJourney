@@ -1,6 +1,7 @@
 <!-- OLD CONTENT -->
 <div class="m-5 p-5">
   <button class="btn m-2" routerLink="/" routerLinkActive="active">Home</button>
-  <button class="btn" routerLink="/posts" routerLinkActive="active">Posts</button>
+  <button class="btn" routerLink="/posts" routerLinkActive="active"
+    [queryParams]="{ page : 1, orderBy : 'newest'}">Posts</button>
 </div>
 <router-outlet></router-outlet>

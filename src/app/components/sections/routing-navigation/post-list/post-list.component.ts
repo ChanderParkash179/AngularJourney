@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css']
 })
-export class PostListComponent {
+export class PostListComponent implements OnInit {
+  constructor(private activeRoute: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.activeRoute.queryParamMap.subscribe(value => {
+      let page = value.get('page');
+      let orderBy = value.get('orderBy');
+    });
+
+  }
 
   posts: Array<any> = [{
     id: 1,
@@ -31,5 +41,6 @@ export class PostListComponent {
     id: 6,
     title: 'Title 6',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-  },];
+  }];
+
 }
