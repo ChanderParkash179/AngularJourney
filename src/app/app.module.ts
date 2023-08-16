@@ -19,6 +19,7 @@ import { CustomValidationComponent } from './components/sections/custom-validati
 import { PostListComponent } from './components/sections/routing-navigation/post-list/post-list.component';
 import { HomeComponent } from './components/sections/routing-navigation/home/home.component';
 import { PostComponent } from './components/sections/routing-navigation/post/post.component';
+import { ObservablesComponent } from './components/sections/observables/observables.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { PostComponent } from './components/sections/routing-navigation/post/pos
     CustomValidationComponent,
     PostListComponent,
     HomeComponent,
-    PostComponent
+    PostComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
