@@ -20,8 +20,9 @@ import { PostListComponent } from './components/sections/routing-navigation/post
 import { HomeComponent } from './components/sections/routing-navigation/home/home.component';
 import { PostComponent } from './components/sections/routing-navigation/post/post.component';
 import { ObservablesComponent } from './components/sections/observables/observables.component';
-import { PageOneComponent } from './components/sections/routing-navigation/wild-card-routers/page-one/page-one.component';
-import { PageTwoComponent } from './components/sections/routing-navigation/wild-card-routers/page-two/page-two.component';
+import { PageOneComponent } from './components/sections/routing-navigation/navigate-programmatically/page-one/page-one.component';
+import { PageTwoComponent } from './components/sections/routing-navigation/navigate-programmatically/page-two/page-two.component';
+import { WildCardRouterComponent } from './components/sections/routing-navigation/wild-card-router/wild-card-router.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { PageTwoComponent } from './components/sections/routing-navigation/wild-
     PostComponent,
     ObservablesComponent,
     PageOneComponent,
-    PageTwoComponent
+    PageTwoComponent,
+    WildCardRouterComponent
   ],
   imports: [
     BrowserModule,
