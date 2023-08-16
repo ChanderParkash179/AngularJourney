@@ -20,6 +20,8 @@ import { PostListComponent } from './components/sections/routing-navigation/post
 import { HomeComponent } from './components/sections/routing-navigation/home/home.component';
 import { PostComponent } from './components/sections/routing-navigation/post/post.component';
 import { ObservablesComponent } from './components/sections/observables/observables.component';
+import { PageOneComponent } from './components/sections/routing-navigation/wild-card-routers/page-one/page-one.component';
+import { PageTwoComponent } from './components/sections/routing-navigation/wild-card-routers/page-two/page-two.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { ObservablesComponent } from './components/sections/observables/observab
     PostListComponent,
     HomeComponent,
     PostComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    PageOneComponent,
+    PageTwoComponent
   ],
   imports: [
     BrowserModule,
