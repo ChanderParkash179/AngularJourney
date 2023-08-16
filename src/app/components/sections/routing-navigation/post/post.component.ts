@@ -11,9 +11,11 @@ export class PostComponent implements OnInit {
   constructor(private _activatedRoute: ActivatedRoute) { }
 
   id: any;
+  title: any;
   ngOnInit(): void {
     this._activatedRoute.paramMap.subscribe(value => {
       this.id = value.get('id');
+      this.title = value.get('title');
     });
   }
 

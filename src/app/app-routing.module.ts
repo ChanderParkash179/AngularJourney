@@ -6,7 +6,7 @@ import { PostComponent } from './components/sections/routing-navigation/post/pos
 
 const routes: Routes = [
   { path: 'posts', component: PostListComponent },
-  { path: 'post/:id', component: PostComponent },
+  { path: 'post/:id/:title', component: PostComponent },
   { path: '', component: HomeComponent },
 
 ];
