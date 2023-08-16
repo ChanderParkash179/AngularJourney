@@ -14,6 +14,14 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - [Template Driven Forms](#template-driven-forms)
 - [Reactive Forms](#reactive-forms)
 - [Angular Routing & Navigation](#angular-routing--navigation)
+- [HTTP and RESTful Services](#http-restful-services)
+- [Working with HTTP](#working-with-http)
+- [Data Handling and Manipulation](#data-handling-manipulation)
+- [Sending HTTP Requests](#sending-http-requests)
+- [HTTP Request Configuration](#http-request-configuration)
+- [Advanced Concepts](#advanced-concepts)
+- [Error Handling](#error-handling)
+- [Angular Interceptors](#angular-intercepators)
 
 ## Course Introduction 🎓
 
@@ -77,7 +85,7 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - Understanding the concept of Observables and asynchronous programming.
 - Navigating programmatically and passing parameters to routes.
 
-## 🌐 HTTP and RESTful Services
+## HTTP and RESTful Services 🌐
 
 - HTTP Overview
 - RESTful Web Service
@@ -85,32 +93,26 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - Angular HTTP API
 - HTTP Configuration
 
-## 🚀 Getting Started with Angular
-
-- Creating Angular App
-- Angular Services
-- Creating Angular Service
-
-## 🔗 Working with HTTP
+## Working with HTTP 🔗
 
 - Injecting HTTP Client
 - Using HTTP Client
 - JSON Placeholder
 
-## 🌍 Data Handling and Manipulation
+## Data Handling and Manipulation 🌍
 
 - Mapping HTTP Response
 - Subscribing to Observables
 - Environment Variables
 
-## 📬 Sending HTTP Requests
+## Sending HTTP Requests 📬
 
 - Sending POST Request
 - Sending PUT Request
 - Sending PATCH Request
 - Sending DELETE Request
 
-## 📝 HTTP Request Configuration
+## HTTP Request Configuration 📝
 
 - HTTP Headers
 - HTTP Request Parameters
@@ -118,7 +120,7 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - HTTP Request Progress
 - Request Text Data Type
 
-## ➰ Advanced Concepts
+## Advanced Concepts ➰
 
 - Data Manipulation
 - Reactive Programming
@@ -127,13 +129,13 @@ Welcome to My Angular Journey! This repository documents my progress as I learn 
 - RxJS Map Operator
 - RxJS Retry Operator
 
-## ❌ Error Handling
+## Error Handling ❌
 
 - Error Handling Overview
 - Error Catch and Replace
 - Error Catch and Re-throw
 
-## ⚙️ Angular Interceptors
+## Angular Interceptors ⚙️
 
 - Angular Interceptor
 
