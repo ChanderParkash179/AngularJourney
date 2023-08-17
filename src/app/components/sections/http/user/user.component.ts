@@ -19,7 +19,9 @@ export class UserComponent implements OnInit {
 
     // this.onCreateUser();
 
-    this.onUpdateUser();
+    // this.onUpdateUser();
+
+    this.onPatchUser();
   }
 
   // *******************************************************
@@ -109,6 +111,24 @@ export class UserComponent implements OnInit {
 
   onUpdateUser() {
     this._userService.updateUser(this.updateUser).subscribe(
+      (response) => console.table(response),
+      (error: any) => console.log(error),
+      () => console.log('done creating a user!')
+    );
+  }
+
+  // *******************************************************
+
+  // PATCH USER
+  private patchUser: User = {
+    'id': 1,
+    'name': 'Rihan',
+    'username': 'Simon',
+    'email': 'Rihan@april.biz'
+  };
+
+  onPatchUser() {
+    this._userService.patchUser(this.patchUser).subscribe(
       (response) => console.table(response),
       (error: any) => console.log(error),
       () => console.log('done creating a user!')

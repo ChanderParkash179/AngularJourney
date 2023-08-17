@@ -33,4 +33,9 @@ export class UserService {
     return this._http.put<User>(this.baseUrl + `users/${user.id}`, user);
   }
 
+  // patch old user
+  patchUser(user: User): Observable<User> {
+    return this._http.patch<User>(this.baseUrl + `users/${user.id}`, user);
+  }
+
 }
