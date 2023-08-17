@@ -1,35 +1,3 @@
 <div class="container text-center m-5 p-5 border">
   <h1>{{ title }}</h1>
-
-  <div class="form-group">
-    <input type="text" class="form-control" [(ngModel)]="id">
-  </div>
-  <div>
-    <button class="btn btn-primary m-2" type="submit" (click)="onGetUser(id)">Submit</button>
-  </div>
-  <div class="response">
-    <table class="table text-center" *ngIf="hasData; else elseBlock">
-      <tr>
-        <td>id => {{ user.id }}</td>
-      </tr>
-      <tr>
-        <td>name => {{ user.name }}</td>
-      </tr>
-      <tr>
-        <td>username => {{ user.username }}</td>
-      </tr>
-      <tr>
-        <td>email => {{ user.email }}</td>
-      </tr>
-      <tr>
-        <td>phone => {{ user.phone }}</td>
-      </tr>
-      <tr>
-        <td>website => {{ user.website }}</td>
-      </tr>
-    </table>
-    <ng-template #elseBlock>
-      No User searched till Now!.
-    </ng-template>
-  </div>
 </div>
