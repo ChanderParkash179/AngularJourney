@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/app/environment/environment';
@@ -13,6 +13,8 @@ export class UserService {
 
   baseUrl: string = environment.baseApiUrl;
 
+  readonly additionalParams = ['test1', 'test2'];
+
   // get all users
   getUsers(): Observable<User[]> {
     let headers = new HttpHeaders()
@@ -24,12 +26,19 @@ export class UserService {
 
   // get user by id
   getUser(id: number): Observable<User> {
-    return this._http.get<User>(this.baseUrl + 'users/' + id);
+    let params = new HttpParams()
+      .set('page', '2')
+      .set('sort', 'asc');
+
+    return this._http.get<User>(this.baseUrl + 'users/' + id, { params: params });
   }
 
   // create new user
   createUser(user: User): Observable<User> {
-    return this._http.post<User>(this.baseUrl + 'users', user);
+    const objectParams = { ['testList']: this.additionalParams }
+    const params = new HttpParams({ fromObject: objectParams });
+
+    return this._http.post<User>(this.baseUrl + 'users', user, { params: params });
   }
 
   // update old user
