@@ -21,7 +21,9 @@ export class UserComponent implements OnInit {
 
     // this.onUpdateUser();
 
-    this.onPatchUser();
+    // this.onPatchUser();
+
+    this.onDeleteUser();
   }
 
   // *******************************************************
@@ -134,10 +136,18 @@ export class UserComponent implements OnInit {
       () => console.log('done creating a user!')
     );
   }
-
   // *******************************************************
 
   // DELETE USER
+  deleteUserId: number = 1;
+  onDeleteUser() {
+    this._userService.deleteUser(this.deleteUserId).subscribe(
+      (response) => console.table(response),
+      (error: any) => console.log(error),
+      () => console.log('done creating a user!')
+    );
+  }
+
 
   // *******************************************************
 

@@ -38,4 +38,8 @@ export class UserService {
     return this._http.patch<User>(this.baseUrl + `users/${user.id}`, user);
   }
 
+  // delete user
+  deleteUser(id: number): Observable<User> {
+    return this._http.delete<User>(this.baseUrl + 'users/' + id);
+  }
 }
