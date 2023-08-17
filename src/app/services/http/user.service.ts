@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/app/environment/environment';
@@ -15,7 +15,11 @@ export class UserService {
 
   // get all users
   getUsers(): Observable<User[]> {
-    return this._http.get<User[]>(this.baseUrl + 'users');
+    let headers = new HttpHeaders()
+      .set('content-type', 'application/json')
+      .set('dummy', 'chander');
+
+    return this._http.get<User[]>(this.baseUrl + 'users', { headers: headers });
   }
 
   // get user by id
