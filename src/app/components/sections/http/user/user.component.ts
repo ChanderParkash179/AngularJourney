@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     // this.onGetUsers();
 
-    this.onGetUser();
+    // this.onGetUser();
 
     // this.onCreateUser();
 
@@ -24,6 +24,8 @@ export class UserComponent implements OnInit {
     // this.onPatchUser();
 
     // this.onDeleteUser();
+
+    this.onUploadText()
   }
 
   // *******************************************************
@@ -151,4 +153,11 @@ export class UserComponent implements OnInit {
 
   // *******************************************************
 
+  // UPLOAD TEXT
+  onUploadText() {
+    this._userService.uploadText().subscribe(
+      (response) => console.log('RESPONSE: ', response),
+      (error: any) => console.log(error)
+    );
+  }
 }

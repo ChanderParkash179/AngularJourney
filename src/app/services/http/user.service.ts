@@ -55,4 +55,9 @@ export class UserService {
   deleteUser(id: number): Observable<User> {
     return this._http.delete<User>(this.baseUrl + 'users/' + id);
   }
+
+  // text return type
+  uploadText(): Observable<string> {
+    return this._http.get('assets/text.txt', { responseType: 'text' });
+  }
 }
