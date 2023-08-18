@@ -25,7 +25,9 @@ export class UserComponent implements OnInit {
 
     // this.onDeleteUser();
 
-    this.onUploadText()
+    // this.onUploadText()
+
+    this.onDownloadFile();
   }
 
   // *******************************************************
@@ -160,4 +162,16 @@ export class UserComponent implements OnInit {
       (error: any) => console.log(error)
     );
   }
+
+  // *******************************************************
+
+  // LARGE FILE
+  onDownloadFile() {
+    this._userService.downloadFile().subscribe(
+      (response) => console.log('RESPONSE: ', response),
+      (error: any) => console.log(error)
+    );
+  }
+
+  
 }

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/app/environment/environment';
@@ -59,5 +59,10 @@ export class UserService {
   // text return type
   uploadText(): Observable<string> {
     return this._http.get('assets/text.txt', { responseType: 'text' });
+  }
+
+  // large file
+  downloadFile(): Observable<HttpResponse<Blob>> {
+    return this._http.get('assets/text.txt', { responseType: 'blob', observe: 'response' });
   }
 }
