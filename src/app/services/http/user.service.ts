@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders, HttpParams, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, of, throwError } from 'rxjs';
 import { environment } from 'src/app/environment/environment';
 
 import { User } from 'src/app/models/user-model/user';
@@ -27,10 +27,14 @@ export class UserService {
   excErrorGetUsersCRethrow(): Observable<User[]> | any {
     return this._http.get<User[]>(this.baseUrl + 'users')
       .pipe(
-        catchError((error: any) => {
-          console.log(error);
-          return of([{ id: 0, name: 'Chander Parkash' }])
-        }));
+        catchError(this.handleError))
+  }
+
+  private handleError(error: HttpErrorResponse): Observable<never> {
+    if (error.status === 404) {
+      return throwError({ code: 404, message: "Page Not found!" });
+    }
+    return throwError(error);
   }
 
   // get all users
