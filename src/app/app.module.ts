@@ -25,6 +25,7 @@ import { PageOneComponent } from './components/sections/routing-navigation/navig
 import { PageTwoComponent } from './components/sections/routing-navigation/navigate-programmatically/page-two/page-two.component';
 import { WildCardRouterComponent } from './components/sections/routing-navigation/wild-card-router/wild-card-router.component';
 import { UserComponent } from './components/sections/http/user/user.component';
+import { UserListComponent } from './components/sections/http/user/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserComponent } from './components/sections/http/user/user.component';
     PageOneComponent,
     PageTwoComponent,
     WildCardRouterComponent,
-    UserComponent
+    UserComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<div class="container m-5 p-5 border text-center">
+  <table class="table border">
+    <thead>
+      <tr class="bg-primary text-white">
+        <th scope="col">#</th>
+        <th scope="col">profile</th>
+        <th scope="col">name</th>
+        <th scope="col">username</th>
+        <th scope="col">role</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td class="bg-warning text-white">#{{ user.id }}</td>
+        <td><img [src]="user.image" width="50" height="50" class="avatar"></td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.isAdmin }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.website }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

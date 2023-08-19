@@ -3,6 +3,7 @@ import { Company } from "./company"
 
 export interface User {
   id?: number
+  image?: string
   name: string
   username: string
   email: string
