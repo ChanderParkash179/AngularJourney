@@ -15,7 +15,16 @@ export class UserService {
 
   readonly additionalParams = ['test1', 'test2'];
 
-  excErrorGetUsers(): Observable<User[]> | any {
+  excErrorGetUsersCReplace(): Observable<User[]> | any {
+    return this._http.get<User[]>(this.baseUrl + 'users')
+      .pipe(
+        catchError((error: any) => {
+          console.log(error);
+          return of([{ id: 0, name: 'Chander Parkash' }])
+        }));
+  }
+
+  excErrorGetUsersCRethrow(): Observable<User[]> | any {
     return this._http.get<User[]>(this.baseUrl + 'users')
       .pipe(
         catchError((error: any) => {

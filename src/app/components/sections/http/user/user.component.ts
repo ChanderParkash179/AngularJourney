@@ -27,7 +27,11 @@ export class UserComponent implements OnInit {
 
     // this.onUploadText()
 
-    this.onDownloadFile();
+    // this.onDownloadFile();
+
+    this.onErrorHandlingGetUsersCReplace();
+
+    this.onErrorHandlingGetUsersCRethrow();
   }
 
   // *******************************************************
@@ -173,5 +177,24 @@ export class UserComponent implements OnInit {
     );
   }
 
-  
+  // *******************************************************
+
+  // ERROR HANDLING - (CATCH & REPLACE)
+
+  onErrorHandlingGetUsersCReplace() {
+    this._userService.excErrorGetUsersCReplace().subscribe(
+      (response: User[]) => console.table(response),
+      (error: any) => console.log(error)
+    )
+  }
+
+  // ERROR HANDLING - (CATCH & RETHROW)
+
+  onErrorHandlingGetUsersCRethrow() {
+    this._userService.excErrorGetUsersCRethrow().subscribe(
+      (response: User[]) => console.table(response),
+      (error: any) => console.log(error)
+    )
+  }
+
 }
