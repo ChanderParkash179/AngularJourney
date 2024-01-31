@@ -26,39 +26,41 @@ import { PageTwoComponent } from './components/sections/routing-navigation/navig
 import { WildCardRouterComponent } from './components/sections/routing-navigation/wild-card-router/wild-card-router.component';
 import { UserComponent } from './components/sections/http/user/user.component';
 import { UserListComponent } from './components/sections/http/user/user-list/user-list.component';
+import { SignalComponent } from "./components/sections/signal/signal.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NotesComponent,
-    TaskOneComponent,
-    DirectivesComponent,
-    TaskTwoComponent,
-    PipesComponent,
-    CustomPipePipe,
-    CustomPipeWithArgumentsPipe,
-    PostServiceComponent,
-    TemplateDrivenFormsComponent,
-    ReactiveFormsComponent,
-    CustomValidationComponent,
-    PostListComponent,
-    HomeComponent,
-    PostComponent,
-    ObservablesComponent,
-    PageOneComponent,
-    PageTwoComponent,
-    WildCardRouterComponent,
-    UserComponent,
-    UserListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [PostService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NotesComponent,
+        TaskOneComponent,
+        DirectivesComponent,
+        TaskTwoComponent,
+        PipesComponent,
+        CustomPipePipe,
+        CustomPipeWithArgumentsPipe,
+        PostServiceComponent,
+        TemplateDrivenFormsComponent,
+        ReactiveFormsComponent,
+        CustomValidationComponent,
+        PostListComponent,
+        HomeComponent,
+        PostComponent,
+        ObservablesComponent,
+        PageOneComponent,
+        PageTwoComponent,
+        WildCardRouterComponent,
+        UserComponent,
+        UserListComponent
+    ],
+    providers: [PostService],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        SignalComponent
+    ]
 })
 export class AppModule { }

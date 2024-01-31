@@ -1,0 +1,30 @@
+<div class="container border mt-5 p-4 rounded">
+  <h1 class="text-center leading">
+    Signal Tutorial
+  </h1>
+  <form class="row g-3">
+    <div class="input-group mb-3">
+      <input type="text" [value]="firstName()" #fname class="form-control" [placeholder]="firstName">
+      <button (click)="getFirstName(fname.value)" class="btn btn-primary" type="button" id="btnFirst">First
+        Name</button>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" [value]="lastName()" #lname class="form-control" [placeholder]="lastName">
+      <button (click)="getLastName(lname.value)" class="btn btn-warning" type="button" id="btnLast">Last Name</button>
+    </div>
+  </form>
+
+  <div class="text-center">
+    <div class="row">
+      <div class="col-6">
+        <h1>{{ firstName() }}</h1>
+      </div>
+      <div class="col-6">
+        <h1>{{ lastName() }}</h1>
+      </div>
+    </div>
+    <div class="col-12 border rounded pt-1">
+      <h1>{{ fullName() }}</h1>
+    </div>
+  </div>
+</div>
