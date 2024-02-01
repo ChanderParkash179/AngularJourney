@@ -26,7 +26,7 @@ import { PageTwoComponent } from './components/sections/routing-navigation/navig
 import { WildCardRouterComponent } from './components/sections/routing-navigation/wild-card-router/wild-card-router.component';
 import { UserComponent } from './components/sections/http/user/user.component';
 import { UserListComponent } from './components/sections/http/user/user-list/user-list.component';
-import { SignalComponent } from "./components/sections/signal/signal.component";
+import { SignalComponent } from "./components/angular17/signal/signal.component";
 
 @NgModule({
     declarations: [
