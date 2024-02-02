@@ -26,41 +26,43 @@ import { PageTwoComponent } from './components/sections/routing-navigation/navig
 import { WildCardRouterComponent } from './components/sections/routing-navigation/wild-card-router/wild-card-router.component';
 import { UserComponent } from './components/sections/http/user/user.component';
 import { UserListComponent } from './components/sections/http/user/user-list/user-list.component';
-import { SignalComponent } from "./components/angular17/signal/signal.component";
+import { SignalComponent } from './components/angular17/signal/signal.component';
+import { IfElseComponent } from './components/angular17/control-flow/ifElse/if-else/if-else.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NotesComponent,
-        TaskOneComponent,
-        DirectivesComponent,
-        TaskTwoComponent,
-        PipesComponent,
-        CustomPipePipe,
-        CustomPipeWithArgumentsPipe,
-        PostServiceComponent,
-        TemplateDrivenFormsComponent,
-        ReactiveFormsComponent,
-        CustomValidationComponent,
-        PostListComponent,
-        HomeComponent,
-        PostComponent,
-        ObservablesComponent,
-        PageOneComponent,
-        PageTwoComponent,
-        WildCardRouterComponent,
-        UserComponent,
-        UserListComponent
-    ],
-    providers: [PostService],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        SignalComponent
-    ]
+  declarations: [
+    AppComponent,
+    NotesComponent,
+    TaskOneComponent,
+    DirectivesComponent,
+    TaskTwoComponent,
+    PipesComponent,
+    CustomPipePipe,
+    CustomPipeWithArgumentsPipe,
+    PostServiceComponent,
+    TemplateDrivenFormsComponent,
+    ReactiveFormsComponent,
+    CustomValidationComponent,
+    PostListComponent,
+    HomeComponent,
+    PostComponent,
+    ObservablesComponent,
+    PageOneComponent,
+    PageTwoComponent,
+    WildCardRouterComponent,
+    UserComponent,
+    UserListComponent,
+  ],
+  providers: [PostService],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    SignalComponent,
+    IfElseComponent,
+  ],
 })
-export class AppModule { }
+export class AppModule {}

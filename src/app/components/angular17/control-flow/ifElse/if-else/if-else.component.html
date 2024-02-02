@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <form>
+    <div class="mb-3">
+      <div class="row">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            [value]="age()"
+            #ageVal
+            class="form-control"
+            [placeholder]="agePlaceholder"
+          />
+        </div>
+        <div>
+          <button
+            (click)="getAge(ageVal.value)"
+            (keyup.enter)="getAge(ageVal.value)"
+            class="btn btn-warning"
+            type="button"
+            id="btnLast"
+          >
+            Enter Age
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  @if (age() > 17) {
+  <div class="alert alert-success mt-3" role="alert">
+    You're eligible to participate!
+  </div>
+  } @else if (age() <= 0) {
+  <div class="alert alert-warning mt-3" role="alert">Please Enter Age!</div>
+  } @else {
+  <div class="alert alert-danger mt-3" role="alert">
+    Sorry, wait for the right time.
+  </div>
+  }
+</div>
